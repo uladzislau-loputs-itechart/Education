@@ -1,0 +1,11 @@
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\obj\Debug\netcoreapp3.0\Logger.csprojAssemblyReference.cache
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\obj\Debug\netcoreapp3.0\Logger.AssemblyInfoInputs.cache
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\obj\Debug\netcoreapp3.0\Logger.AssemblyInfo.cs
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.exe
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.deps.json
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.runtimeconfig.json
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.runtimeconfig.dev.json
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.dll
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.pdb
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\obj\Debug\netcoreapp3.0\Logger.dll
+C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\obj\Debug\netcoreapp3.0\Logger.pdb
