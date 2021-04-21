@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mikalai.Yarmolenkau\\source\\repos\\Logger\\Logger.csproj",
+      "projectUniqueName": "D:\\git\\Education\\Nickerm\\Logger\\Logger.csproj",
       "projectName": "Logger",
-      "projectPath": "C:\\Users\\Mikalai.Yarmolenkau\\source\\repos\\Logger\\Logger.csproj",
+      "projectPath": "D:\\git\\Education\\Nickerm\\Logger\\Logger.csproj",
       "packagesPath": "C:\\Users\\Mikalai.Yarmolenkau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mikalai.Yarmolenkau\\source\\repos\\Logger\\obj\\",
+      "outputPath": "D:\\git\\Education\\Nickerm\\Logger\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mikalai.Yarmolenkau\\AppData\\Roaming\\NuGet\\NuGet.Config",

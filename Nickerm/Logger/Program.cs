@@ -6,11 +6,12 @@ namespace Logger
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            var fileLogger = new Logger(DestinationClass.FileLogger);
-            fileLogger.Error("some text");
-            var consoleLogger = new Logger();
-            consoleLogger.Info("some info");
+             var fileLogger = new Logger(LogDestination.FileLogger);
+             fileLogger.Error("some text1");
+             var consoleLogger = new Logger();
+             consoleLogger.Info("some info");
+            consoleLogger.Error("some info");
+            consoleLogger.Warning("some info");
         }
     }
 }

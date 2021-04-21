@@ -9,3 +9,14 @@ C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.
 C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\bin\Debug\netcoreapp3.0\Logger.pdb
 C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\obj\Debug\netcoreapp3.0\Logger.dll
 C:\Users\Mikalai.Yarmolenkau\source\repos\Logger\obj\Debug\netcoreapp3.0\Logger.pdb
+D:\git\Education\Nickerm\Logger\obj\Debug\netcoreapp3.0\Logger.csprojAssemblyReference.cache
+D:\git\Education\Nickerm\Logger\obj\Debug\netcoreapp3.0\Logger.AssemblyInfoInputs.cache
+D:\git\Education\Nickerm\Logger\obj\Debug\netcoreapp3.0\Logger.AssemblyInfo.cs
+D:\git\Education\Nickerm\Logger\obj\Debug\netcoreapp3.0\Logger.dll
+D:\git\Education\Nickerm\Logger\obj\Debug\netcoreapp3.0\Logger.pdb
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.exe
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.deps.json
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.runtimeconfig.json
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.runtimeconfig.dev.json
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.dll
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.pdb

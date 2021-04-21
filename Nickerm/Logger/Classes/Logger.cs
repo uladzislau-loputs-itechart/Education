@@ -1,27 +1,26 @@
 ﻿using System;
 
 namespace Logger
-
 {
-    public enum DestinationClass
+    public enum LogDestination
     {
-        ConsoleLogger,
-        FileLogger
+        FileLogger,
+        ConsoleLogger
     }
-    class Logger: ILogger
+    class Logger : ILogger
     {
-        private ILogger logger;
+        private ILoggerDestination logger;
 
         public Logger()
         {
             logger = new ConsoleLogger();
         }
 
-        public Logger(DestinationClass destinationClass)
+        public Logger(LogDestination logDestination)
         {
-            try 
+            try
             {
-                if (destinationClass == DestinationClass.ConsoleLogger)
+                if (logDestination == LogDestination.ConsoleLogger)
                 {
                     logger = new ConsoleLogger();
                 }
@@ -33,27 +32,27 @@ namespace Logger
             catch (Exception e)
             {
                 throw new Exception(e.Message);
-            }        
+            }
         }
 
         public void Error(string message)
         {
-            logger.Error(message);
+            logger.Log($"ERROR: {message}");
         }
 
         public void Error(Exception ex)
         {
-            logger.Error(ex);
+            logger.Log($"ERROR: {ex.Message}");
         }
 
         public void Info(string message)
         {
-            logger.Info(message);
+            logger.Log($"Info: {message}");
         }
 
         public void Warning(string message)
         {
-            logger.Warning(message);
+            logger.Log($"Warning: {message}");
         }
     }
 }
