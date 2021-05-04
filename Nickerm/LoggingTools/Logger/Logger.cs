@@ -1,13 +1,14 @@
 ﻿using System;
 
-namespace Logger
+namespace LoggingTools
+
 {
     public enum LogDestination
     {
         FileLogger,
         ConsoleLogger
     }
-    class Logger : ILogger
+    public class Logger : ILogger
     {
         private ILoggerDestination logger;
 

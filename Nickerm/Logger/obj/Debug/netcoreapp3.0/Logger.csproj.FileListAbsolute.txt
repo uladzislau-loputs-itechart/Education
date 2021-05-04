@@ -20,3 +20,8 @@ D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.runtimeconfig.jso
 D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.runtimeconfig.dev.json
 D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.dll
 D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Logger.pdb
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\LoggingTools.dll
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\LoggingTools.pdb
+D:\git\Education\Nickerm\Logger\obj\Debug\netcoreapp3.0\Logger.csproj.CopyComplete
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\Dynamitey.dll
+D:\git\Education\Nickerm\Logger\bin\Debug\netcoreapp3.0\ImpromptuInterface.dll

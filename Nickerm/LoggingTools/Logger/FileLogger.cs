@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Logger
+namespace LoggingTools
 {
     class FileLogger : ILoggerDestination
     {

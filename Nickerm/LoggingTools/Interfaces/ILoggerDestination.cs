@@ -1,5 +1,5 @@
 ﻿
-namespace Logger
+namespace LoggingTools
 {
     public interface ILoggerDestination
     {
