@@ -9,9 +9,17 @@ namespace LoggingTools
 {
     public class LoggingProxy<T>
     {
+        private Logger logger;
+        public LoggingProxy()
+        {
+            logger = new Logger();
+        }
+        public LoggingProxy(LogDestination logDestination)
+        {
+            logger = new Logger(logDestination);
+        }
         public T CreateInstance(T obj)
         {
-            
             dynamic loggedObj = new ExpandoObject();
             var loggedObjDictionary = (IDictionary<string, object>)loggedObj;
 
@@ -28,13 +36,11 @@ namespace LoggingTools
                         try
                         {
                             method?.Invoke(obj, null);
-                            new Logger(LogDestination.FileLogger).Info($"{method.Name}");
-                            new Logger().Info($"{method.Name}");
+                            logger.Info($"{method.Name}");
                         }
                         catch (Exception e)
                         {
-                            new Logger(LogDestination.FileLogger).Error($"{method.Name}");
-                            new Logger().Error($"{method.Name}");
+                            logger.Error($"{method.Name}");
                             throw new Exception(e.Message);                         
                         }               
                     }));

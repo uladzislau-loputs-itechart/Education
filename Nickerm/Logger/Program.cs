@@ -8,21 +8,11 @@ namespace CustomLogger
     {
         static void Main(string[] args)
         {
-            //var fileLogger = new Logger(LogDestination.FileLogger);
-            //fileLogger.Error("some text1");
-            //var consoleLogger = new Logger();
-            //consoleLogger.Info("some info");
-            //consoleLogger.Error("some info");
-            //consoleLogger.Warning("some info");
-
             var mouse = new Mouse();
             var logProxy = new LoggingProxy<IMouse>();
             var logM = logProxy.CreateInstance(mouse);
             logM.Sound();
-            logM.Sound1();
-            //logM.MouseCount(23);
-            //logM.MousePet("Pete","White-Black",2);
-
+            logM.Move();
         }
     }
 
@@ -45,12 +35,12 @@ namespace CustomLogger
 
         public void Sound()
         {
-            Console.WriteLine("Pe pe pe");
+            Console.WriteLine("Mouse make sound");
         }
 
-        public void Sound1()
+        public void Move()
         {
-            Console.WriteLine("asasasasas");
+            Console.WriteLine("Mouse is move");
         }
     }
 }

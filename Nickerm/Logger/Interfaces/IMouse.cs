@@ -7,7 +7,7 @@ namespace CustomLogger
     public interface IMouse
     {
         void Sound();
-        void Sound1();
+        void Move();
         int MouseCount(decimal legs);
 
         object MousePet(string name, string color, int colorCount); 
