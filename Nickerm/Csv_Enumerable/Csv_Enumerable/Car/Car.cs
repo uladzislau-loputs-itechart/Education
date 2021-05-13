@@ -24,7 +24,7 @@ namespace Csv_Enumerable
         public double Acceleration { get; set; }
         [Name("engine cylinder configuration")]
         public int EngineCylinderConfig { get; set; }
-        //[Name("reg date")]
-        //public DateTime RegDate { get; set; }
+        [Name("reg date")]
+        public DateTime RegDate { get; set; }
     }
 }

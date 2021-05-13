@@ -31,12 +31,20 @@ namespace Csv_Enumerable
 
                     var property = typeof(T).GetProperties();
                     string result = "| ";
-
+                    DateTime date;
                     foreach (var item in records)
                     {
                         foreach (var prop in property)
                         {
-                            result += $" {prop.GetValue(item)} |";
+                            if (prop.PropertyType == typeof(DateTime))
+                            {
+                                date = (DateTime)prop.GetValue(item);
+                                result += $" {date.ToString("dd.MM.yyyy")} |";
+                            }
+                            else
+                            {
+                                result += $" {prop.GetValue(item)} |";
+                            }
                         }
                         Console.WriteLine($"{result}");
                         result = "| ";
