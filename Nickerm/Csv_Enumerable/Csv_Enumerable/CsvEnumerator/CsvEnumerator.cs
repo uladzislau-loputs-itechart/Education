@@ -9,11 +9,13 @@ namespace Csv_Enumerable
     public class CsvEnumerator<T> : IEnumerator<T>
     {
         private List<T> records;
+
         public CsvEnumerator(List<T> records)
         {
             this.records = records;
         }
         int position = -1;
+
         public T Current 
         {
             get
@@ -31,6 +33,7 @@ namespace Csv_Enumerable
         object IEnumerator.Current => this.Current;
 
         private bool disposedValue = false;
+
         public void Dispose()
         {
             Dispose(true);
