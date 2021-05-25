@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CsvToDatabase
 {
-    public class Repository<T> : IRepository<T>
+    public class Repository<T> : IRepository<T>, IDisposable
     {
         public ILiteCollection<T> Collection { get; }
 
@@ -18,26 +18,24 @@ namespace CsvToDatabase
             Collection = _db.GetCollection<T>(typeof(T).Name.ToString());
         }
 
-        public IEnumerable<T> All()
+        public virtual IEnumerable<T> All()
         {
             return Collection.FindAll(); 
         }
 
-        //public async void Create(T entity)
-        //{
-        //    try
-        //    {
-        //        await Task.Run(() => Collection.Insert(entity));
-        //    }
-        //    catch(Exception e)
-        //    {
-        //        throw new Exception(e.Message);
-        //    }
-        //}
+        public async virtual Task<IEnumerable<T>> AllAsync()
+        {
+            return await Task.Run(() => All());
+        }
 
-        public void Create(T entity)
+        public virtual void Create(T entity)
         {
             Collection.Insert(entity);
+        }
+
+        public async virtual void CreateAsync(T entity)
+        {
+            await Task.Run(()=> Create(entity));
         }
 
         public virtual bool Delete(int id)
@@ -45,9 +43,19 @@ namespace CsvToDatabase
             return Collection.Delete(id);
         }
 
+        public async virtual void DeleteAsync(int id)
+        {
+            await Task.Run(() => Delete(id));
+        }
+
         public virtual T FindById(int id)
         {
             return Collection.FindById(id);
+        }
+
+        public async virtual Task<T> FindByIdAsync(int id)
+        {
+           return await Task.Run(() => FindById(id));
         }
 
         public virtual void Update(T entity)
@@ -55,30 +63,35 @@ namespace CsvToDatabase
             Collection.Upsert(entity);
         }
 
-        //private bool _disposed;
-        //public void Dispose()
-        //{
-        //    Dispose(true);
-        //    GC.SuppressFinalize(this);
-        //}
+        public async virtual void UpdateAsync(T entity)
+        {
+            await Task.Run(() => Update(entity));
+        }
 
-        //private void Dispose(bool disposing)
-        //{
-        //    if (!_disposed)
-        //    {
-        //        if (disposing)
-        //        {
-        //            if (_db != null)
-        //                _db.Dispose();
-        //        }
-        //        _disposed = true;
-        //    }
-        //}
+        private bool _disposed;
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
 
-        //~Repository()
-        //{
-        //    Dispose(false);
-        //}
+        private void Dispose(bool disposing)
+        {
+            if (!_disposed)
+            {
+                if (disposing)
+                {
+                    if (_db != null)
+                        _db.Dispose();
+                }
+                _disposed = true;
+            }
+        }
+
+        ~Repository()
+        {
+            Dispose(false);
+        }
     }
 }
 
