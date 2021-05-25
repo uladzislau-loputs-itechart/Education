@@ -4,7 +4,7 @@ using System.Text;
 using CsvHelper.Configuration;
 using CsvHelper.Configuration.Attributes;
 
-namespace Csv_Enumerable
+namespace CsvToDatabase
 {
     public class Car
     {
