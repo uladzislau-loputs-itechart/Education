@@ -13,7 +13,7 @@ namespace MoneyManager.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202106041059376_AddCategoryColor"; }
+            get { return "202106041633363_AddCategoryColor"; }
         }
         
         string IMigrationMetadata.Source

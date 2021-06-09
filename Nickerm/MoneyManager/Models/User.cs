@@ -8,23 +8,23 @@ namespace MoneyManager
 {
     public class User
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
 
-        [Required]
-        [Column(TypeName = "nvarchar(64) ")]
+        //[Required]
+        //[Column(TypeName = "nvarchar(64) ")]
         public string Name { get; set; }
 
-        [Required]
-        [Column(TypeName = "nvarchar(64) ")]
+        //[Required]
+        //[Column(TypeName = "nvarchar(64) ")]
         public string Email { get; set; }
 
-        [Required]
-        [Column(TypeName = "nvarchar(1024) ")]
+        //[Required]
+        //[Column(TypeName = "nvarchar(1024) ")]
         public string Hash { get; set; }
 
-        [Required]
-        [Column(TypeName = "nvarchar(1024) ")]
+        //[Required]
+        //[Column(TypeName = "nvarchar(1024) ")]
         public string Salt { get; set; }
 
         public virtual ICollection<Asset> Assets { get; set; }

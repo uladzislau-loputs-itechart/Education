@@ -8,16 +8,15 @@ namespace MoneyManager
 {
     public class Category
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
 
-        [Required]
-        [Column(TypeName = "nvarchar ")]
-        [StringLength(64)]
+        //[Required]
+        //[Column(TypeName = "nvarchar(64) ")]
         public string Name { get; set; }
 
-        [Required]
-        [Column(TypeName = "int")]
+        //[Required]
+        //[Column(TypeName = "int")]
         public int Type { get; set; }
 
         public int? ParentId { get; set; }

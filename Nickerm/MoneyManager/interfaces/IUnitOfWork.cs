@@ -6,13 +6,13 @@ namespace MoneyManager
 {
     public interface IUnitOfWork : IDisposable
     {
-        IRepository<User> Users { get; }
+        UserRepository User { get; }
 
-        IRepository<Asset> Assets { get; }
+        AssetRepository Asset { get; }
 
-        IRepository<Category> Categories { get; }
+        CategoryRepository Category { get; }
 
-        IRepository<Transaction> Transactions { get; }
+        TransactionRepository Transaction { get; }
 
         void Save();
     }

@@ -17,7 +17,5 @@ namespace MoneyManager
         void Update(T item);
 
         void Delete(int id);
-
-        //T GetUser(string email);
     }
 }

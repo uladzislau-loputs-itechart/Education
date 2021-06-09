@@ -13,7 +13,7 @@ namespace MoneyManager.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202106031837298_InitialCreate"; }
+            get { return "202106041631356_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

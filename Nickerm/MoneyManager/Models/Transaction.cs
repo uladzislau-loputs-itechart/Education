@@ -8,28 +8,26 @@ namespace MoneyManager
 {
     public class Transaction
     {
-        [Required]
+        //[Required]
         public int Id { get; set; }
 
-        [Required]
+        //[Required]
         public int CategoryId { get; set; }
 
-        [Required]
-        [Column(TypeName = "decimal(16,3) ")]
+        //[Required]
+        //[Column(TypeName = "decimal(16,3) ")]
         public decimal Amount { get; set; }
 
-        [Required]
-        [Column(TypeName = "datetime2(7) ")]
+        //[Required]
+        //[Column(TypeName = "datetime2(7) ")]
         public DateTime Date { get; set; }
 
-        [Required]
+        //[Required]
         public int AssetId { get; set; }
 
-        [Column(TypeName = "nvarchar ")]
-        [StringLength(1024)]
+        //[Column(TypeName = "nvarchar(1024) ")]
         public string Comment { get; set; }
 
-        [Required]
         public virtual Asset Asset { get; set; }
 
         public virtual Category Categories { get; set; }

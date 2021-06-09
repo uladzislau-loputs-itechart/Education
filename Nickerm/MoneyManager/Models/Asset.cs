@@ -13,14 +13,13 @@ namespace MoneyManager
         public int Id { get; set; }
 
         [Required]
-        [Column(TypeName = "nvarchar ")]
-        [StringLength(64)]
+        //[Column(TypeName = "nvarchar(64)")]
         public string Name { get; set; }
 
-        [Required]
+        //[Required]
         public int UserId { get; set; }
 
-        [Required]
+        //[Required]
         public virtual User User { get; set; }
 
         public virtual ICollection<Transaction> Transactions { get; set; }

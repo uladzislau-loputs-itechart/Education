@@ -14,7 +14,7 @@ namespace MoneyManager
         {
             db = new Context();
         }
-        public IRepository<User> Users
+        public UserRepository User
         {
             get
             {
@@ -24,7 +24,7 @@ namespace MoneyManager
             }
         }
 
-        public IRepository<Asset> Assets
+        public AssetRepository Asset
         {
             get
             {
@@ -34,7 +34,7 @@ namespace MoneyManager
             }
         }
 
-        public IRepository<Category> Categories
+        public CategoryRepository Category
         {
             get
             {
@@ -44,7 +44,7 @@ namespace MoneyManager
             }
         }
 
-        public IRepository<Transaction> Transactions
+        public TransactionRepository Transaction
         {
             get
             {

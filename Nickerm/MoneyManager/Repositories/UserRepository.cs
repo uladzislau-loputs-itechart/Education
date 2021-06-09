@@ -8,11 +8,11 @@ namespace MoneyManager
 {
     public class UserRepository : IRepository<User>
     {
-        private Context db;
+        public Context db;
 
         public UserRepository(Context context)
         {
-            this.db = context;
+            db = context;
         }
 
         public IEnumerable<User> GetAll()
@@ -55,12 +55,12 @@ namespace MoneyManager
            return Get(result.First());
         }
 
-        public List<dynamic> GetAllUsers()
+        public IQueryable<AllUsers> GetAllUsers()
         {
             var result = from u in db.Users
                          orderby u.Name
-                         select new { u.Id, u.Name, u.Email };
-            return result.ToList<dynamic>();
+                         select new AllUsers { Id= u.Id, Name = u.Name, Email = u.Email };
+            return result;
         }
 
         public List<dynamic> GetUserBalance(int id)
