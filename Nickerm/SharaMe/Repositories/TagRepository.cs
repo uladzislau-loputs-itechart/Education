@@ -49,5 +49,14 @@ namespace SharaMe.Repositories
             if (tag != null)
                 db.Tags.Remove(tag);
         }
+
+        //public List<Post> GetPostsByTag(int tagId)
+        //{
+        //    var posts = db.Tags
+        //          .Where(t => t.Id == tagId).Include(p => p.Posts).Select(p => p.Posts)
+        //          //.Include(u => u.Tags.Where(t => t.Id == tagId))
+        //          .ToList();
+        //    return posts;
+        //}
     }
 }

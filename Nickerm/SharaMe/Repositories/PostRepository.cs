@@ -51,24 +51,31 @@ namespace SharaMe.Repositories
                 db.Posts.Remove(post);
         }
 
-        public IQueryable<PostInfo> GetPostInfo(int id)
+        public List<Post> GetPostInfo(int id)
         {
-            var result = from u in db.Users
-                         join p in db.Posts on u.Id equals p.UserId
-                         //join t in db.Tags on p.Id equals t.Id
-                         //join c in db.Categories on p.Id equals c.Id
-                         where u.Id == id
-                         orderby p.UpdatedAt
-                         select new PostInfo { Name = u.Name, Title = p.Title, Image = p.Image, PublishedAt = p.PublishedAt, Published = p.Published, Content = p.Content, };
-                         //Tags = from t in db.Tags
-                         //       where t.Posts.Any(po => po.Post_Id == p.Id)
-                         //       select t };// comments, tags, categories
-            return result;
+            var posts = db.Posts
+                    .Where(u => u.UserId == id).Include(u => u.User).Include(t => t.Tags).Include(c => c.Categories).Include(c => c.Comments)
+                   .ToList();
+            return posts;
+            //foreach (var p in posts)
+            //{
+            //    Console.WriteLine($"{p.User?.Name} {p.Title} {p.Image} {p.PublishedAt} {p.Content} {p.Tags} {p.Categories} {p.Comments}");
+            //    foreach (var c in p.Comments)
+            //        Console.WriteLine($"{c.Title} {c.Content}");
+            //}
         }
 
         public IQueryable<Post> GetMostPopularPosts()
         {
-           return  db.Posts.OrderBy(Posts => Posts.Viewed);
+           return  db.Posts.OrderByDescending(Posts => Posts.Viewed);
+        }
+
+        public Tag GetPostsByTag(int tagId)
+        {
+            var posts = db.Tags
+                    .Where(t => t.Id == tagId).Include(u => u.Posts)
+                  .FirstOrDefault();
+            return posts;
         }
 
         //public IQueryable<Post> GetPostsByTag(int tagId)

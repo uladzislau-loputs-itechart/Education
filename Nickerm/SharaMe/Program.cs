@@ -21,28 +21,22 @@ namespace SharaMe
                         Console.WriteLine("Объекты успешно сохранены");
 
                         var entity = new EFUnitOfWork();
-                        var post = new Post
-                        {
-                            UserId = 1,
-                            Content = "Some content post from user1",
-                            Title = "Some title post",
-                            Published = 1,
-                            Viewed = 10,
-                            Image = " path/to/file",
-                            CreatedAt = DateTime.Now,
-                            PublishedAt = DateTime.Now,
-                            UpdatedAt = DateTime.Now
-                        };
-                        var tag = new Tag() { Content = "sdvsfvvf", Title = "sdcsdc"};
-                        //List<Tag> tags = db.Tags.ToList();
-                        //tags.Add(tag);
-                        //post.Tags =  tags;
-                        //db.Posts.Add(post);
-                        //db.SaveChanges();
-                        entity.Post.Create(post);
-                        //entity.Tag.Create(tag);
-                        entity.Save();
+                        var userId = 3;
 
+                        var post1 = entity.Post.GetPostInfo(userId);
+                        foreach (var p in post1)
+                            Console.WriteLine($"{p.User?.Name} {p.Title} {p.Image} {p.PublishedAt} {p.Content} {p.Tags} {p.Categories} {p.Comments}");
+                        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+                        var post2 = entity.Post.GetMostPopularPosts();
+                        foreach (var p in post2)
+                            Console.WriteLine($" {p.Viewed}  {p.Title} {p.Image} {p.PublishedAt} {p.Content} {p.Tags} {p.Categories} {p.Comments}");
+                        Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
+
+                        var tagId = 1;
+                        var tag = entity.Tag.GetPostsByTag(tagId);
+                        foreach (var p in tag.Posts)
+                            Console.WriteLine($" {p.Id} {p.Viewed}  {p.Title} {p.Image} {p.PublishedAt} {p.Content}");
+                            Console.WriteLine("----------------------------------------------------------------------------------------------------------------");
                         dbContextTransaction.Commit();
                     }
                     catch (Exception e)

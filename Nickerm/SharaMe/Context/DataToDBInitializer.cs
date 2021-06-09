@@ -86,6 +86,10 @@ namespace SharaMe.Context
              new Comment{ PostId = 5, Content = "Some comment for post5", Published = 1, Title = "Some title comment11",
                  PublishedAt = DateTime.Now, CreatedAt = DateTime.Now, ParentId = 10},
              new Comment{ PostId = 6, Content = "Some comment for post6", Published = 1, Title = "Some title comment12",
+                 PublishedAt = DateTime.Now, CreatedAt = DateTime.Now},
+             new Comment{ PostId = 6, Content = "Some comment for post6", Published = 1, Title = "Some title comment13",
+                 PublishedAt = DateTime.Now, CreatedAt = DateTime.Now, ParentId = 12},
+             new Comment{ PostId = 6, Content = "Some comment for post6", Published = 1, Title = "Some title comment14",
                  PublishedAt = DateTime.Now, CreatedAt = DateTime.Now}
             };
 
