@@ -19,7 +19,13 @@ namespace CsvToDatabase
             var carRecord = new CsvEnumerable<Car>(pathToCsv);
             foreach (var record in carRecord)
             {
-               carBD.Create(record);
+                //await Task.Run(()=> carBD.CreateAsync(record));
+                carBD.Create(record);
+            }
+            var x = carBD.All();
+            foreach (var record in x)
+            {
+                Console.WriteLine(record.Id + record.Model);
             }
         }
     }

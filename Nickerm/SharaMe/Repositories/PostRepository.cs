@@ -54,36 +54,14 @@ namespace SharaMe.Repositories
         public List<Post> GetPostInfo(int id)
         {
             var posts = db.Posts
-                    .Where(u => u.UserId == id).Include(u => u.User).Include(t => t.Tags).Include(c => c.Categories).Include(c => c.Comments)
+                    .Where(p => p.UserId == id).Include(u => u.User).Include(t => t.Tags).Include(c => c.Categories).Include(c => c.Comments)
                    .ToList();
             return posts;
-            //foreach (var p in posts)
-            //{
-            //    Console.WriteLine($"{p.User?.Name} {p.Title} {p.Image} {p.PublishedAt} {p.Content} {p.Tags} {p.Categories} {p.Comments}");
-            //    foreach (var c in p.Comments)
-            //        Console.WriteLine($"{c.Title} {c.Content}");
-            //}
         }
 
         public IQueryable<Post> GetMostPopularPosts()
         {
            return  db.Posts.OrderByDescending(Posts => Posts.Viewed);
         }
-
-        public Tag GetPostsByTag(int tagId)
-        {
-            var posts = db.Tags
-                    .Where(t => t.Id == tagId).Include(u => u.Posts)
-                  .FirstOrDefault();
-            return posts;
-        }
-
-        //public IQueryable<Post> GetPostsByTag(int tagId)
-        //{
-        //    var result = from p in db.Posts
-        //                  where p.Tags.Any(t => t.Tag_Id == tagId)
-        //                  select p ;
-        //    return result;
-        //}
     }
 }

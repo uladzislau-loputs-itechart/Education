@@ -21,6 +21,11 @@ namespace SharaMe
                         Console.WriteLine("Объекты успешно сохранены");
 
                         var entity = new EFUnitOfWork();
+
+                        var post3 = entity.Post.Get(1);
+                        Console.WriteLine($"{post3.Id}, {post3.Title}");
+
+
                         var userId = 3;
 
                         var post1 = entity.Post.GetPostInfo(userId);

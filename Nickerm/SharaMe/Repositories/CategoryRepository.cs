@@ -49,5 +49,13 @@ namespace SharaMe.Repositories
             if (category != null)
                 db.Categories.Remove(category);
         }
+
+        public Category GetPostsByCategory(int id)
+        {
+            var category = db.Categories
+                    .Where(c => c.Id == id).Include(p => p.Posts)
+                  .FirstOrDefault();
+            return category;
+        }
     }
 }
