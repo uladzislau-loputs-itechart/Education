@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="5b12401f-1cae-4ec9-bceb-8aace9fd4554" solutionId="5b12401f-1cae-4ec9-bceb-8aace9fd4554" resetWebServer="false" sharePointProductVersion="16.0" name="VacationForm" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="2ab825c8-21f1-41e8-813e-c652f4b8c7f0" />
+  </features>
+</package>

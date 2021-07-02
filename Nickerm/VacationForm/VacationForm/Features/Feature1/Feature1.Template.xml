@@ -1,0 +1,5 @@
+﻿<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="VacationForm Feature1" Id="c355258e-16f6-4451-9c75-bb30364380df" Scope="Web">
+  <ElementManifests>
+    <ElementManifest Location="EventReceiver\Elements.xml" />
+  </ElementManifests>
+</Feature>
